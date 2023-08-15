@@ -1,6 +1,6 @@
 package com.fc.membership.adapter.in.web;
 
-import com.fc.membership.application.port.in.RegisterMemberShipCommand;
+import com.fc.membership.application.port.in.RegisterMembershipCommand;
 import lombok.Value;
 
 @Value
@@ -12,8 +12,8 @@ public class RegisterMemberShipRequest {
     boolean isCorp;
 
 
-    public RegisterMemberShipCommand toCommand() {
-        return RegisterMemberShipCommand.builder()
+    public RegisterMembershipCommand toCommand() {
+        return RegisterMembershipCommand.builder()
                 .name(name)
                 .address(address)
                 .email(email)

@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @EqualsAndHashCode(callSuper = false)
 @Builder
 @Value
-public class RegisterMemberShipCommand extends SelfValidating<RegisterMemberShipCommand> {
+public class RegisterMembershipCommand extends SelfValidating<RegisterMembershipCommand> {
 
     @NotNull
     String name;
@@ -29,7 +29,7 @@ public class RegisterMemberShipCommand extends SelfValidating<RegisterMemberShip
 
     boolean isCorp;
 
-    public RegisterMemberShipCommand(String name, String email, String address, boolean isValid, boolean isCorp) {
+    public RegisterMembershipCommand(String name, String email, String address, boolean isValid, boolean isCorp) {
         this.name = name;
         this.email = email;
         this.address = address;

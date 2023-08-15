@@ -1,6 +1,6 @@
 package com.fc.membership.application.service;
 
-import com.fc.membership.application.port.in.RegisterMemberShipCommand;
+import com.fc.membership.application.port.in.RegisterMembershipCommand;
 import com.fc.membership.application.port.in.RegisterMembershipUseCase;
 import com.fc.membership.application.port.out.RegisterMembershipPort;
 import com.fc.membership.domain.Membership;
@@ -16,7 +16,7 @@ public class RegisterMemberShipService implements RegisterMembershipUseCase {
     private final RegisterMembershipPort registerMembershipPort;
 
     @Override
-    public void registerMembership(RegisterMemberShipCommand command) {
+    public void registerMembership(RegisterMembershipCommand command) {
         registerMembershipPort.createMembership(
                 new Membership.MembershipName(command.getName()),
                 new Membership.MembershipEmail(command.getEmail()),

@@ -5,7 +5,9 @@ import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(unmappedTargetPolicy = ReportingPolicy.ERROR)
+@Mapper(
+        unmappedTargetPolicy = ReportingPolicy.ERROR
+)
 public interface MembershipMapper {
     MembershipMapper INSTANCE = Mappers.getMapper(MembershipMapper.class);
 
