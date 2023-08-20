@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ import java.util.Objects;
 public class MembershipJpaEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long membershipId;
 
     private String name;
@@ -32,6 +33,14 @@ public class MembershipJpaEntity {
 
     public static MembershipJpaEntity of(String name, String address, String email, boolean isValid, String aggregateIdentifier) {
         return new MembershipJpaEntity(null, name, address, email, isValid, aggregateIdentifier);
+    }
+
+    public void updateMembership(String name, String address, String email, boolean isValid) {
+        this.name = name ;
+        this.address = address;
+        this.email = email;
+        this.isValid = isValid;
+
     }
 
     @Override
