@@ -4,8 +4,8 @@ import com.fc.membership.application.port.in.FindMembershipCommand;
 import com.fc.membership.application.port.in.FindMembershipUseCase;
 import com.fc.membership.application.port.out.FindMembershipPort;
 import com.fc.membership.domain.Membership;
-import common.UseCase;
 import lombok.RequiredArgsConstructor;
+import org.fc.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor

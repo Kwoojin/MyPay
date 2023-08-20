@@ -1,9 +1,9 @@
 package com.fc.membership.application.port.in;
 
-import common.SelfValidating;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
+import org.fc.common.SelfValidating;
 
 @EqualsAndHashCode(callSuper = false)
 @Builder
