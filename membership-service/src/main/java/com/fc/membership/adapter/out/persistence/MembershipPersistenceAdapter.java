@@ -11,7 +11,7 @@ import org.fc.common.PersistenceAdapter;
 @RequiredArgsConstructor
 public class MembershipPersistenceAdapter implements RegisterMembershipPort, FindMembershipPort, ModifyMembershipPort {
 
-    private final SpringDateMembershipRepository membershipRepository;
+    private final SpringDataMembershipRepository membershipRepository;
 
     @Override
     public void createMembership(
