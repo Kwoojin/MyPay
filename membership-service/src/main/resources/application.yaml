@@ -18,9 +18,9 @@ spring:
         highlight_sql: true
         default_batch_fetch_size: 100
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
     database: mysql
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: ${SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT}
 
 
 # spring debug level 비활성화 (너무 많음)
