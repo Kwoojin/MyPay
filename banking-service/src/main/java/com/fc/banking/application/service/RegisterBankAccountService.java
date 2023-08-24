@@ -1,7 +1,7 @@
 package com.fc.banking.application.service;
 
-import com.fc.banking.adapter.out.persistence.external.bank.BankAccount;
-import com.fc.banking.adapter.out.persistence.external.bank.GetBankAccountRequest;
+import com.fc.banking.adapter.out.external.bank.BankAccount;
+import com.fc.banking.adapter.out.external.bank.GetBankAccountRequest;
 import com.fc.banking.application.port.in.RegisterBankAccountCommand;
 import com.fc.banking.application.port.in.RegisterBankAccountUseCase;
 import com.fc.banking.application.port.out.RegisterBankAccountPort;

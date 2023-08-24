@@ -1,7 +1,7 @@
 package com.fc.banking.application.service;
 
-import com.fc.banking.adapter.out.persistence.external.bank.ExternalFirmBankingRequest;
-import com.fc.banking.adapter.out.persistence.external.bank.FirmBankingResult;
+import com.fc.banking.adapter.out.external.bank.ExternalFirmBankingRequest;
+import com.fc.banking.adapter.out.external.bank.FirmBankingResult;
 import com.fc.banking.application.port.in.RequestFirmBankingCommand;
 import com.fc.banking.application.port.in.RequestFirmBankingUseCase;
 import com.fc.banking.application.port.out.RequestExternalFirmBankingPort;

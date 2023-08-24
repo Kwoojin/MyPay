@@ -1,4 +1,4 @@
-package com.fc.banking.adapter.out.persistence.external.bank;
+package com.fc.banking.adapter.out.external.bank;
 
 import lombok.Value;
 

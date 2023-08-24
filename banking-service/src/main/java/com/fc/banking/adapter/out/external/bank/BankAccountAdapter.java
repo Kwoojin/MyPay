@@ -1,4 +1,4 @@
-package com.fc.banking.adapter.out.persistence.external.bank;
+package com.fc.banking.adapter.out.external.bank;
 
 import com.fc.banking.application.port.out.RequestBankAccountInfoPort;
 import com.fc.banking.application.port.out.RequestExternalFirmBankingPort;
