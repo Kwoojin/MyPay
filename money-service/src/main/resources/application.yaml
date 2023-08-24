@@ -1,0 +1,49 @@
+spring:
+  datasource:
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:mem:test
+#    username: user
+#    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        highlight_sql: true
+        default_batch_fetch_size: 100
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    database: mysql
+    database-platform: ${SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT}
+
+
+# spring debug level 비활성화 (너무 많음)
+debug: false
+#Actuator 에 endpoint 중 감춰져 있는 부분을 모두 활성화 시킴
+management.endpoints.web.exposure.include: "*"
+
+#package 단위 log 활성화
+logging:
+  level:
+    com.fc.membership: debug
+    #request, response log
+    org.springframework.web.servlet: debug
+    #jpa query log debug 중 binding query parameter ? 으로 나타나는 것을 관찰할 수 있게함
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  api-docs:
+    path: /api-docs
+
+
+
