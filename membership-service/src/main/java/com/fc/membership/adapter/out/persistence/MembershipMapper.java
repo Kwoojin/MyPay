@@ -19,7 +19,7 @@ public interface MembershipMapper {
                 new Membership.MembershipEmail(membership.getEmail()),
                 new Membership.MembershipAddress(membership.getAddress()),
                 new Membership.MembershipIsValid(membership.isValid()),
-                new Membership.MembershipAggregateIdentifier(membership.getAggregateIdentifier())
+                new Membership.MembershipIsCorp(membership.isCorp())
         );
     }
 

@@ -19,7 +19,7 @@ public class MembershipPersistenceAdapter implements RegisterMembershipPort, Fin
             Membership.MembershipEmail membershipEmail,
             Membership.MembershipAddress membershipAddress,
             Membership.MembershipIsValid membershipIsValid,
-            Membership.MembershipAggregateIdentifier membershipAggregateIdentifier
+            Membership.MembershipIsCorp membershipIsCorp
     ) {
         membershipRepository.save(
                 MembershipJpaEntity.of(
@@ -27,7 +27,7 @@ public class MembershipPersistenceAdapter implements RegisterMembershipPort, Fin
                         membershipEmail.getEmailValue(),
                         membershipAddress.getAddressValue(),
                         membershipIsValid.isValidValue(),
-                        membershipAggregateIdentifier.getAggregateIdentifier()
+                        membershipIsCorp.isCorpValue()
                 )
         );
 
@@ -41,13 +41,21 @@ public class MembershipPersistenceAdapter implements RegisterMembershipPort, Fin
     }
 
     @Override
-    public Membership modifyMembership(Membership.MembershipId membershipId, Membership.MembershipName membershipName, Membership.MembershipEmail membershipEmail, Membership.MembershipAddress membershipAddress, Membership.MembershipIsValid membershipIsValid) {
+    public Membership modifyMembership(
+            Membership.MembershipId membershipId,
+            Membership.MembershipName membershipName,
+            Membership.MembershipEmail membershipEmail,
+            Membership.MembershipAddress membershipAddress,
+            Membership.MembershipIsValid membershipIsValid,
+            Membership.MembershipIsCorp membershipIsCorp
+    ) {
         MembershipJpaEntity membershipJpaEntity = membershipRepository.getById(Long.parseLong(membershipId.getMembershipId()));
         membershipJpaEntity.updateMembership(
                 membershipName.getNameValue(),
                 membershipAddress.getAddressValue(),
                 membershipEmail.getEmailValue(),
-                membershipIsValid.isValidValue()
+                membershipIsValid.isValidValue(),
+                membershipIsCorp.isCorpValue()
         );
 
         // return

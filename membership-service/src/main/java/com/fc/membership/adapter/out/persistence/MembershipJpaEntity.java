@@ -27,18 +27,18 @@ public class MembershipJpaEntity {
 
     private boolean isValid;
 
-    private String aggregateIdentifier;
+    private boolean isCorp;
 
-    public static MembershipJpaEntity of(String name, String address, String email, boolean isValid, String aggregateIdentifier) {
-        return new MembershipJpaEntity(null, name, address, email, isValid, aggregateIdentifier);
+    public static MembershipJpaEntity of(String name, String address, String email, boolean isValid, boolean isCorp) {
+        return new MembershipJpaEntity(null, name, address, email, isValid, isCorp);
     }
 
-    public void updateMembership(String name, String address, String email, boolean isValid) {
+    public void updateMembership(String name, String address, String email, boolean isValid, boolean isCorp) {
         this.name = name ;
         this.address = address;
         this.email = email;
         this.isValid = isValid;
-
+        this.isCorp = isCorp;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class MembershipJpaEntity {
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", isValid=" + isValid +
-                ", aggregateIdentifier=" + aggregateIdentifier +
+                ", isCorp=" + isCorp +
                 '}';
     }
 

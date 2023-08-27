@@ -37,6 +37,8 @@ logging:
     #jpa query log debug 중 binding query parameter ? 으로 나타나는 것을 관찰할 수 있게함
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
+#  topic: fc.logging.out.stdout
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
@@ -44,6 +46,8 @@ springdoc:
   default-produces-media-type: application/json
   api-docs:
     path: /api-docs
+
+#kafka.clusters.bootstrapservers: localhost:29092
 
 
 

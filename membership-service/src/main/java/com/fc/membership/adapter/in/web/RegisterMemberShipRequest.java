@@ -9,6 +9,7 @@ public class RegisterMemberShipRequest {
     String name;
     String address;
     String email;
+    boolean isCorp;
 
 
     public RegisterMembershipCommand toCommand() {
@@ -17,6 +18,7 @@ public class RegisterMemberShipRequest {
                 .address(address)
                 .email(email)
                 .isValid(true)
+                .isCorp(isCorp)
                 .build();
     }
 }

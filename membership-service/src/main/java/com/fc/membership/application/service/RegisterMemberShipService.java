@@ -22,7 +22,7 @@ public class RegisterMemberShipService implements RegisterMembershipUseCase {
                 new Membership.MembershipEmail(command.getEmail()),
                 new Membership.MembershipAddress(command.getAddress()),
                 new Membership.MembershipIsValid(command.isValid()),
-                new Membership.MembershipAggregateIdentifier("default")
+                new Membership.MembershipIsCorp(command.isValid())
         );
     }
 

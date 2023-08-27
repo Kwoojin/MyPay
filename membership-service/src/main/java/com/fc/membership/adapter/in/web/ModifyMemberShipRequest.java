@@ -10,6 +10,7 @@ public class ModifyMemberShipRequest {
     String address;
     String email;
     boolean isValid;
+    boolean isCorp;
 
 
     public ModifyMembershipCommand toCommand(String membershipId) {
@@ -19,6 +20,7 @@ public class ModifyMemberShipRequest {
                 .address(address)
                 .email(email)
                 .isValid(isValid)
+                .isCorp(isCorp)
                 .build();
     }
 }
