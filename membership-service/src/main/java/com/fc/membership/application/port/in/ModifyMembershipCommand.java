@@ -1,7 +1,7 @@
 package com.fc.membership.application.port.in;
 
 import lombok.*;
-import org.fc.common.SelfValidating;
+import com.fc.common.SelfValidating;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;

@@ -8,7 +8,7 @@ import com.fc.banking.application.port.out.RegisterBankAccountPort;
 import com.fc.banking.application.port.out.RequestBankAccountInfoPort;
 import com.fc.banking.domain.RegisteredBankAccount;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.UseCase;
+import com.fc.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor

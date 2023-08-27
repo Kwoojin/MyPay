@@ -1,4 +1,4 @@
-package org.fc.common;
+package com.fc.common;
 
 import javax.validation.*;
 import java.util.Set;

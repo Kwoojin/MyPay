@@ -3,7 +3,7 @@ package com.fc.banking.adapter.out.persistence;
 import com.fc.banking.application.port.out.RequestFirmBankingPort;
 import com.fc.banking.domain.FirmBankingRequest;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.PersistenceAdapter;
+import com.fc.common.PersistenceAdapter;
 
 import java.util.UUID;
 

@@ -5,7 +5,7 @@ import com.fc.membership.application.port.out.ModifyMembershipPort;
 import com.fc.membership.application.port.out.RegisterMembershipPort;
 import com.fc.membership.domain.Membership;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.PersistenceAdapter;
+import com.fc.common.PersistenceAdapter;
 
 @PersistenceAdapter
 @RequiredArgsConstructor

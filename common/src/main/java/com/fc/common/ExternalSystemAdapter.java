@@ -1,4 +1,4 @@
-package org.fc.common;
+package com.fc.common;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.stereotype.Component;

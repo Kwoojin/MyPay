@@ -3,7 +3,7 @@ package com.fc.money.application.port.in;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
-import org.fc.common.SelfValidating;
+import com.fc.common.SelfValidating;
 
 import javax.validation.constraints.NotNull;
 

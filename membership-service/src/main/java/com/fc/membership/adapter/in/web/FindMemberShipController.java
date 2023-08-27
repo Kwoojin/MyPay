@@ -5,7 +5,7 @@ import com.fc.membership.application.port.in.FindMembershipCommand;
 import com.fc.membership.application.port.in.FindMembershipUseCase;
 import com.fc.membership.domain.Membership;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.WebAdapter;
+import com.fc.common.WebAdapter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

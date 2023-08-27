@@ -6,7 +6,7 @@ import com.fc.money.application.port.out.IncreaseMoneyPort;
 import com.fc.money.domain.MemberMoney;
 import com.fc.money.domain.MoneyChangingRequest;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.UseCase;
+import com.fc.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;

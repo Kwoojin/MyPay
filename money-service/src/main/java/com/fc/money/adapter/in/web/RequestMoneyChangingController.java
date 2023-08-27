@@ -5,7 +5,7 @@ import com.fc.money.application.port.in.IncreaseMoneyRequestCommand;
 import com.fc.money.application.port.in.IncreaseMoneyRequestUseCase;
 import com.fc.money.domain.MoneyChangingRequest;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.WebAdapter;
+import com.fc.common.WebAdapter;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

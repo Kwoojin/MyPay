@@ -3,7 +3,7 @@ package com.fc.banking.adapter.out.persistence;
 import com.fc.banking.application.port.out.RegisterBankAccountPort;
 import com.fc.banking.domain.RegisteredBankAccount;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.PersistenceAdapter;
+import com.fc.common.PersistenceAdapter;
 
 @PersistenceAdapter
 @RequiredArgsConstructor

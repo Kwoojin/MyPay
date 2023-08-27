@@ -4,7 +4,7 @@ import com.fc.money.application.port.out.IncreaseMoneyPort;
 import com.fc.money.domain.MemberMoney;
 import com.fc.money.domain.MoneyChangingRequest;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.PersistenceAdapter;
+import com.fc.common.PersistenceAdapter;
 
 import java.time.LocalDateTime;
 import java.util.List;

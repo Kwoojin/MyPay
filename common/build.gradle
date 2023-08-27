@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.fc.common'
+group 'com.fc.common'
 version 'unspecified'
 
 repositories {

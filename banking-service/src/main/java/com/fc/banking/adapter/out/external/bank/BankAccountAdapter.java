@@ -2,7 +2,7 @@ package com.fc.banking.adapter.out.external.bank;
 
 import com.fc.banking.application.port.out.RequestBankAccountInfoPort;
 import com.fc.banking.application.port.out.RequestExternalFirmBankingPort;
-import org.fc.common.ExternalSystemAdapter;
+import com.fc.common.ExternalSystemAdapter;
 
 @ExternalSystemAdapter
 public class BankAccountAdapter implements RequestBankAccountInfoPort, RequestExternalFirmBankingPort {

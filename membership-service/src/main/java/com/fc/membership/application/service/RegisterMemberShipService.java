@@ -5,7 +5,7 @@ import com.fc.membership.application.port.in.RegisterMembershipUseCase;
 import com.fc.membership.application.port.out.RegisterMembershipPort;
 import com.fc.membership.domain.Membership;
 import lombok.RequiredArgsConstructor;
-import org.fc.common.UseCase;
+import com.fc.common.UseCase;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
