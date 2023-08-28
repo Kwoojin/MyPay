@@ -18,10 +18,25 @@ public class RequestMoneyChangingController {
     private final IncreaseMoneyRequestUseCase increaseMoneyRequestUseCase;
 
     @PostMapping(path = "/money/increase")
-    public MoneyChangingResultDetail increaseMoneyChangingRequest(@RequestBody IncreaseMoneyChangingRequest request) {
+    MoneyChangingResultDetail increaseMoneyChangingRequest(@RequestBody IncreaseMoneyChangingRequest request) {
         IncreaseMoneyRequestCommand command = request.toCommand();
 
         MoneyChangingRequest moneyChangingRequest = increaseMoneyRequestUseCase.increaseMoneyRequest(command);
+        // MoneyChangingRequest -> MoneyChangingResultDetail
+
+        return new MoneyChangingResultDetail(
+                moneyChangingRequest.getMoneyChangingRequestId(),
+                0,
+                0,
+                moneyChangingRequest.getChangingMoneyAmount());
+
+    }
+
+    @PostMapping(path = "/money/increase-async")
+    MoneyChangingResultDetail increaseMoneyChangingRequestAsync(@RequestBody IncreaseMoneyChangingRequest request) {
+        IncreaseMoneyRequestCommand command = request.toCommand();
+
+        MoneyChangingRequest moneyChangingRequest = increaseMoneyRequestUseCase.increaseMoneyRequestAsync(command);
         // MoneyChangingRequest -> MoneyChangingResultDetail
 
         return new MoneyChangingResultDetail(

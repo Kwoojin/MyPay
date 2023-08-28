@@ -72,6 +72,9 @@ services:
       - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL5InnoDBDialect
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - KAFKA_CLUSTERS_BOOTSTRAPSERVERS=kafka:29092
+      - SERVICE_MEMBERSHIP_URL=http://membership-service:8080
+      - TASK_TOPIC=fc.task.topic
+      - TASK_RESULT_TOPIC=fc.task.result.topic
       - LOGGING_TOPIC=fc.logging.out.stdout
 
   zookeeper:
@@ -129,6 +132,20 @@ services:
     environment:
       - KAFKA_CLUSTERS_BOOTSTRAPSERVERS=kafka:29092
       - LOGGING_TOPIC=fc.logging.out.stdout
+
+  task-consumer:
+    image: my-pay-task-consumer:0.0.1-SNAPSHOT
+    networks:
+      - fc_network
+    restart: always
+    depends_on:
+      - kafka
+      - zookeeper
+    environment:
+      - KAFKA_CLUSTERS_BOOTSTRAPSERVERS=kafka:29092
+      - LOGGING_TOPIC=fc.logging.out.stdout
+      - TASK_TOPIC=fc.task.topic
+      - TASK_RESULT_TOPIC=fc.task.result.topic
 
 networks:
   fc_network:
