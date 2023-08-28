@@ -9,7 +9,7 @@ import lombok.Value;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Membership {
 
-    private final String memberShipId;
+    private final String membershipId;
 
     private final String name;
 
@@ -17,9 +17,9 @@ public class Membership {
 
     private final String address;
 
-    private final boolean isValid;
+    private final Boolean isValid;
 
-    private final boolean isCorp;
+    private final Boolean isCorp;
 
     public static Membership generateMember(MembershipId membershipId, MembershipName membershipName, MembershipEmail membershipEmail, MembershipAddress membershipAddress, MembershipIsValid membershipIsValid, MembershipIsCorp  membershipIsCorp) {
         return new Membership(
